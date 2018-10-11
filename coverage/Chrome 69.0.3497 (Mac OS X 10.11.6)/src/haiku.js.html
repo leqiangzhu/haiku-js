@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/haiku.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> haiku.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">!function(e){var n={};function t(r){<span class="missing-if-branch" title="if path not taken" >I</span>if(n[r])<span class="cstat-no" title="statement not covered" >return n[r].exports;v</span>ar o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.m=e,t.c=n,t.d=<span class="fstat-no" title="function not covered" >function(e,n,r){<span class="cstat-no" title="statement not covered" ></span>t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})}</span>,t.r=<span class="fstat-no" title="function not covered" >function(e){<span class="cstat-no" title="statement not covered" ></span>Object.defineProperty(e,"__esModule",{value:!0})}</span>,t.n=<span class="fstat-no" title="function not covered" >function(e){<span class="cstat-no" title="statement not covered" ></span>var n=e&amp;&amp;e.__esModule?<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return e.default}</span>:<span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>return e}</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn t.d(n,"a",n),n}</span>,t.o=<span class="fstat-no" title="function not covered" >function(e,n){<span class="cstat-no" title="statement not covered" ></span>return Object.prototype.hasOwnProperty.call(e,n)}</span>,t.p="/var/folders/rt/8pw2tmjx2cb02tpb6dkyx0s80000gr/T/_karma_webpack_/",t(t.s=12)}({12:function(module,exports,__webpack_require__){"use strict";eval('\n\nObject.defineProperty(exports, "__esModule", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }\n\nvar HaikuChecker = exports.HaikuChecker = function () {\n  function HaikuChecker(lineOne, lineTwo, lineThree) {\n    _classCallCheck(this, HaikuChecker);\n\n    this.lineOne = lineOne;\n    this.lineTwo = lineTwo;\n    this.lineThree = lineThree;\n  }\n\n  _createClass(HaikuChecker, [{\n    key: \'CountTheWords\',\n    value: function CountTheWords(word) {\n\n      var i;\n      if (word.length &lt;= 4) {\n        return 1;\n      }\n\n      word = word.split(\'\');\n      word = word.replace(/(?:[^laeiouy]|ed|[^laeiouy]e)$/, \'\');\n      var syllablesCount = word.match(/[aeiouy]{1,2}/g);\n      return syllablesCount.length;\n    }\n  }, {\n    key: \'CheckTheLines\',\n    value: function CheckTheLines() {\n      var message = "";\n\n      var lineOneCount = this.CountTheWords(this.lineOne);\n      var lineTwoCount = this.CountTheWords(this.lineTwo);\n      var lineThreeCount = this.CountTheWords(this.lineThree);\n\n      if (lineOneCount === 5 &amp;&amp; lineTwoCount === 7 &amp;&amp; lineThreeCount === 5) {\n\n        message === "It\'s a Haiku";\n      } else {\n        message === "Try Again";\n      }\n      return message;\n    }\n  }]);\n\n  return HaikuChecker;\n}();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaGFpa3UuanM/Yzg3ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0lBR0U7d0JBQVksU0FBUyxTQUFTO0FBQzVCOztTQUFLLFVBQ0w7U0FBSyxVQUNMO1NBQUssWUFDTjtBQUdBOzs7O2tDQUFlLE1BRWQ7O1VBQ0E7VUFBSSxLQUFLLFVBQVUsR0FBSztlQUFXO0FBRW5DOzthQUFPLEtBQUssTUFDWjthQUFPLEtBQUssUUFBUSxrQ0FDcEI7VUFBSSxpQkFBaUIsS0FBSyxNQUN4QjthQUFPLGVBRVY7QUFHRDs7O29DQUNFO1VBQUksVUFFSjs7VUFBSSxlQUFhLEtBQUssY0FBYyxLQUNwQztVQUFJLGVBQWEsS0FBSyxjQUFjLEtBQ3BDO1VBQUksaUJBQWUsS0FBSyxjQUFjLEtBRXRDOztVQUFJLGlCQUFrQixLQUFLLGlCQUFpQixLQUFLLG1CQUFtQixHQUVsRTs7b0JBQ0Q7QUFIRCxhQUlFO29CQUNEO0FBQ0Q7YUFFRDtBQXBDdUIiLCJmaWxlIjoiMTIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuZXhwb3J0IGNsYXNzIEhhaWt1Q2hlY2tlciB7XG4gIGNvbnN0cnVjdG9yKGxpbmVPbmUsIGxpbmVUd28sIGxpbmVUaHJlZSkge1xuICAgIHRoaXMubGluZU9uZSA9IGxpbmVPbmU7XG4gICAgdGhpcy5saW5lVHdvID0gbGluZVR3bztcbiAgICB0aGlzLmxpbmVUaHJlZSA9IGxpbmVUaHJlZTtcbiAgfVxuXG5cbiAgIENvdW50VGhlV29yZHMgKHdvcmQpIHtcbiAgXG4gICAgdmFyIGk7XG4gICAgaWYgKHdvcmQubGVuZ3RoIDw9IDQpIHsgcmV0dXJuIDE7IH1cbiAgIFxuICAgIHdvcmQgPSB3b3JkLnNwbGl0KCcnKTtcbiAgICB3b3JkID0gd29yZC5yZXBsYWNlKC8oPzpbXmxhZWlvdXldfGVkfFtebGFlaW91eV1lKSQvLCAnJyk7XG4gICAgdmFyIHN5bGxhYmxlc0NvdW50ID0gd29yZC5tYXRjaCgvW2FlaW91eV17MSwyfS9nKTtcbiAgICAgIHJldHVybiBzeWxsYWJsZXNDb3VudC5sZW5ndGg7XG4gICAgXG4gIH1cblxuICBcbiAgQ2hlY2tUaGVMaW5lcyAoKSB7XG4gICAgdmFyIG1lc3NhZ2U9XCJcIjtcblxuICAgIHZhciBsaW5lT25lQ291bnQ9dGhpcy5Db3VudFRoZVdvcmRzKHRoaXMubGluZU9uZSk7XG4gICAgdmFyIGxpbmVUd29Db3VudD10aGlzLkNvdW50VGhlV29yZHModGhpcy5saW5lVHdvKTtcbiAgICB2YXIgbGluZVRocmVlQ291bnQ9dGhpcy5Db3VudFRoZVdvcmRzKHRoaXMubGluZVRocmVlKTtcblxuICAgIGlmIChsaW5lT25lQ291bnQgPT09ICA1ICYmIGxpbmVUd29Db3VudCA9PT0gNyAmJiBsaW5lVGhyZWVDb3VudCA9PT0gNSkge1xuICAgICAgXG4gICAgICBtZXNzYWdlID09PSBcIkl0J3MgYSBIYWlrdVwiO1xuICAgIH0gZWxzZSB7XG4gICAgICBtZXNzYWdlID09PVwiVHJ5IEFnYWluXCI7XG4gICAgfVxuICAgIHJldHVybiBtZXNzYWdlO1xuICBcbiAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///12\n')}});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 11 2018 10:33:33 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

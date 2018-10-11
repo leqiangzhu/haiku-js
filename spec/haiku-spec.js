@@ -11,7 +11,7 @@ describe("HaikuChecker", function() {
     var resultHaiku = new HaikuChecker(line1,line2,line3 );
    
     it("should try Again !!!! ", function() {
-      expect(resultHaiku.GetWordsCheck()).toEqual('Try Again');
+      expect(resultHaiku.CheckTheLines()).toEqual('Try Again');
   
     });
 
